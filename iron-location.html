@@ -310,7 +310,7 @@ milliseconds.
           }
         }
 
-        if (url.origin !== origin) {
+        if (url.origin !== origin || url.protocol !== window.location.protocol) {
           return null;
         }
         var normalizedHref = url.pathname + url.search + url.hash;
